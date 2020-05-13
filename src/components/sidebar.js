@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 import AddIcon from "@material-ui/icons/Add";
-import { makeStyles, Typography, Button } from "@material-ui/core";
 import FilterListIcon from "@material-ui/icons/FilterList";
+import {
+  makeStyles,
+  Typography,
+  Button,
+  TextField,
+  Popover,
+} from "@material-ui/core";
+import { createNewVehicle } from "../actions/index";
 
 const useSidebarStyles = makeStyles({
   container: {
@@ -13,16 +21,90 @@ const useSidebarStyles = makeStyles({
 
 export default function Sidebar() {
   const classes = useSidebarStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [name, setName] = useState("");
+  const [make, setMake] = useState("");
+  const [year, setYear] = useState("");
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const dispatch = useDispatch();
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+  const addNewVehicle = (event) => {
+    event.preventDefault();
+    let payload = {
+      name,
+      year,
+      make,
+    };
+    dispatch(createNewVehicle(payload));
+  };
+
+  console.log(name, year, make);
   return (
     <div className={classes.container}>
-      <Typography variant="h3" >Vehicles</Typography>
+      <Typography variant="h4">Vehicles</Typography>
       <div>
         <Button>
           <FilterListIcon />
         </Button>
-        <Button>
+        <Button onClick={handleClick}>
           <AddIcon />
         </Button>
+        <Popover
+          id={id}
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handleClose}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
+          <div style={{ margin: "30px" }}>
+            <form onSubmit={addNewVehicle}>
+              <div>
+                <TextField
+                  variant="outlined"
+                  placeholder="Enter vehicle name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div>
+                <TextField
+                  variant="outlined"
+                  placeholder="Enter vehicle year"
+                  onChange={(e) => setYear(e.target.value)}
+                />
+              </div>
+              <div>
+                <TextField
+                  variant="outlined"
+                  placeholder="Enter vehicle make"
+                  onChange={(e) => setMake(e.target.value)}
+                />
+              </div>
+              <Button
+                color="primary"
+                type="submit"
+                variant="contained"
+                style={{ marginTop: "10px" }}
+              >
+                Add New
+              </Button>
+            </form>
+          </div>
+        </Popover>
       </div>
     </div>
   );
