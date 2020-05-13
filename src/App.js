@@ -11,6 +11,12 @@ const useAppStyles = makeStyles({
     // flex: 1,
     overflowY: "none",
   },
+  list: {
+    width: "50%",
+  },
+  vehicleDetails: {
+    borderLeft: "1px solid black",
+  },
 });
 
 function App() {
@@ -18,11 +24,11 @@ function App() {
 
   return (
     <div className={classes.app}>
-      <div style={{ width: "50%" }}>
+      <div className={classes.list}>
         <Sidebar />
         <ListOfVehicles />
       </div>
-      <div style={{ border: "1px solid black", width: "50%" }}>
+      <div className={classes.vehicleDetails}>
         <VehicleDetails />
       </div>
     </div>
