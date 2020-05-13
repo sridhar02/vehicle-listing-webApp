@@ -5,27 +5,23 @@ import { Typography, makeStyles } from "@material-ui/core";
 
 const useVehicleDetailsStyles = makeStyles({
   container: {
-    marginTop: "30px",
+    margin: "20px",
+    position: "fixed",
+    // display: "flex",
+    // flexDirection: "column",
+    // justifyContent: "center",
   },
   title: {
-    display: "flex",
-    justifyContent: "center",
+    textAlign: "center",
   },
   vehicle: {
-    // border: "1px solid black",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    // width: "30%",
-    marginTop: "40px",
+    border: "1px solid black",
   },
 });
 
 export default function VehicleDetails() {
   const classes = useVehicleDetailsStyles();
   const vehicles = useSelector((state) => state.vehicles);
-  // console.log(vehicles.vehicle);
 
   return (
     <div className={classes.container}>
@@ -35,10 +31,10 @@ export default function VehicleDetails() {
       <div>
         {vehicles.vehicle && (
           <div>
-            <Typography variant="h6">Id:{vehicles.vehicle.id}</Typography>
+            <Typography variant="h6">Vechicle Id : {vehicles.vehicle.id}</Typography>
             <Typography variant="h6">Name : {vehicles.vehicle.name}</Typography>
-            <Typography variant="h6"> Year:{vehicles.vehicle.year}</Typography>
-            <Typography variant="h6"> Make: {vehicles.vehicle.make}</Typography>
+            <Typography variant="h6"> Year : {vehicles.vehicle.year}</Typography>
+            <Typography variant="h6"> Make : {vehicles.vehicle.make}</Typography>
           </div>
         )}
       </div>
