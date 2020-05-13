@@ -28,7 +28,7 @@ export default function VehicleDetails() {
         Vehicle Details Panel
       </Typography>
       <div>
-        {vehicles.vehicle && (
+        {vehicles.vehicle ? (
           <div className={classes.vehicle}>
             <Typography variant="h6">
               Vechicle Id : {vehicles.vehicle.id}
@@ -43,6 +43,10 @@ export default function VehicleDetails() {
               Make : {vehicles.vehicle.make}
             </Typography>
           </div>
+        ) : (
+          <Typography variant="h6" style={{ marginTop: "20px" }}>
+            Please select a vehicle from the left side list
+          </Typography>
         )}
       </div>
     </div>

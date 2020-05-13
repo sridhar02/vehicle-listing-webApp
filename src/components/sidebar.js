@@ -16,6 +16,9 @@ const useSidebarStyles = makeStyles({
   container: {
     display: "flex",
     justifyContent: "space-between",
+    // position: "sticky",
+    // backgroundColor: "blue",
+    top: "10px",
   },
 });
 
