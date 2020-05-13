@@ -1,0 +1,118 @@
+{
+  "vehicles": [
+    {
+      "MakeId": 449,
+      "MakeName": "Mercedes-Benz",
+      "VehicleTypeId": 2,
+      "VehicleTypeName": "Passenger Car"
+    },
+    {
+      "MakeId": 449,
+      "MakeName": "Mercedes-Benz",
+      "VehicleTypeId": 3,
+      "VehicleTypeName": "Truck "
+    },
+    {
+      "MakeId": 449,
+      "MakeName": "Mercedes-Benz",
+      "VehicleTypeId": 5,
+      "VehicleTypeName": "Bus"
+    },
+    {
+      "MakeId": 449,
+      "MakeName": "Mercedes-Benz",
+      "VehicleTypeId": 7,
+      "VehicleTypeName": "Multipurpose Passenger Vehicle (MPV)"
+    },
+    {
+      "MakeId": 449,
+      "MakeName": "Mercedes-Benz",
+      "VehicleTypeId": 10,
+      "VehicleTypeName": "Incomplete Vehicle"
+    },
+    {
+      "MakeId": 465,
+      "MakeName": "Mercury",
+      "VehicleTypeId": 2,
+      "VehicleTypeName": "Passenger Car"
+    },
+    {
+      "MakeId": 465,
+      "MakeName": "Mercury",
+      "VehicleTypeId": 3,
+      "VehicleTypeName": "Truck "
+    },
+    {
+      "MakeId": 465,
+      "MakeName": "Mercury",
+      "VehicleTypeId": 7,
+      "VehicleTypeName": "Multipurpose Passenger Vehicle (MPV)"
+    },
+    {
+      "MakeId": 465,
+      "MakeName": "Mercury",
+      "VehicleTypeId": 10,
+      "VehicleTypeName": "Incomplete Vehicle"
+    },
+    {
+      "MakeId": 928,
+      "MakeName": "Fabricacion y Comercializacion Pena",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 945,
+      "MakeName": "Capstone Commerce",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 4977,
+      "MakeName": "Strick Commercial Trailer",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 5416,
+      "MakeName": "Ca. Commercial Trailer",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 5804,
+      "MakeName": "Commercial Structures ",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 6983,
+      "MakeName": "J & T MERCHANDISE INC",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 7008,
+      "MakeName": "Commercial Mobile Systems",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 8306,
+      "MakeName": "Commercial Manufacturing & Industrial, Co.",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 8959,
+      "MakeName": "Bivouac Commercial Vehicles",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    },
+    {
+      "MakeId": 9539,
+      "MakeName": "Commercial Vehicles CV",
+      "VehicleTypeId": 6,
+      "VehicleTypeName": "Trailer"
+    }
+  ]
+}
