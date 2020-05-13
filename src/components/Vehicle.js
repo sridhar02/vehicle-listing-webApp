@@ -16,6 +16,8 @@ const useVehicleDetailsStyles = makeStyles({
   },
   vehicle: {
     border: "1px solid black",
+    padding:"8px",
+    marginTop:"20px"
   },
 });
 
@@ -30,11 +32,19 @@ export default function VehicleDetails() {
       </Typography>
       <div>
         {vehicles.vehicle && (
-          <div>
-            <Typography variant="h6">Vechicle Id : {vehicles.vehicle.id}</Typography>
+          <div className={classes.vehicle}>
+            <Typography variant="h6">
+              Vechicle Id : {vehicles.vehicle.id}
+            </Typography>
             <Typography variant="h6">Name : {vehicles.vehicle.name}</Typography>
-            <Typography variant="h6"> Year : {vehicles.vehicle.year}</Typography>
-            <Typography variant="h6"> Make : {vehicles.vehicle.make}</Typography>
+            <Typography variant="h6">
+              {" "}
+              Year : {vehicles.vehicle.year}
+            </Typography>
+            <Typography variant="h6">
+              {" "}
+              Make : {vehicles.vehicle.make}
+            </Typography>
           </div>
         )}
       </div>
