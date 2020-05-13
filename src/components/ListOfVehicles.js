@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import InfinteScroll from "react-infinite-scroll-component";
 
-import { Typography, makeStyles, Button } from "@material-ui/core";
+import { makeStyles, Button } from "@material-ui/core";
 import { getVehiclesDetails, selectVehicle } from "../actions/index";
 
 function Vehicle({ vehicle }) {
   const dispatch = useDispatch();
-
-  const selectVehicl = () => {
+  const handleSelectVehicle = () => {
     const payload = {
       id: vehicle.id,
       name: vehicle.name,
@@ -18,10 +17,9 @@ function Vehicle({ vehicle }) {
 
     dispatch(selectVehicle(payload));
   };
-
   return (
     <div>
-      <Button onClick={() => selectVehicl()}>
+      <Button onClick={() => handleSelectVehicle()}>
         {vehicle.id} {vehicle.name}
       </Button>
     </div>
@@ -30,11 +28,7 @@ function Vehicle({ vehicle }) {
 
 const useListOfVehiclesStyles = makeStyles({
   container: {
-    // border: "1px solid black",
-    borderRight: 0,
-    overflowY: "auto",
-    // margin: "20px",
-    // padding: "8px",
+    borderTop: "1px solid black",
   },
 });
 
@@ -55,7 +49,6 @@ function ListOfVehicles() {
 
   return (
     <div className={classes.container}>
-      {/* <Typography variant="h4">Vehicle Details</Typography> */}
       {vehicles.vehicles && (
         <InfinteScroll
           dataLength={vehicles.vehicles.length}
