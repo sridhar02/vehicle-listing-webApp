@@ -12,7 +12,7 @@ const useAppStyles = makeStyles({
     overflowY: "none",
   },
   list: {
-    width: "50%",
+    width: "20%",
   },
   vehicleDetails: {
     borderLeft: "1px solid black",

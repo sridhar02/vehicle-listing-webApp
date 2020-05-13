@@ -7,17 +7,14 @@ const useVehicleDetailsStyles = makeStyles({
   container: {
     margin: "20px",
     position: "fixed",
-    // display: "flex",
-    // flexDirection: "column",
-    // justifyContent: "center",
   },
   title: {
     textAlign: "center",
   },
   vehicle: {
     border: "1px solid black",
-    padding:"8px",
-    marginTop:"20px"
+    padding: "8px",
+    marginTop: "20px",
   },
 });
 

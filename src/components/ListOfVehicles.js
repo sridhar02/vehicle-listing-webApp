@@ -19,8 +19,9 @@ function Vehicle({ vehicle }) {
   };
   return (
     <div>
-      <Button onClick={() => handleSelectVehicle()}>
-        {vehicle.id} {vehicle.name}
+      <Button onClick={() => handleSelectVehicle()}   style={{width:"100%"}}>
+        {vehicle.id}. 
+        {vehicle.name}
       </Button>
     </div>
   );
