@@ -25,7 +25,7 @@ export default function VehicleDetails() {
   return (
     <div className={classes.container}>
       <Typography className={classes.title} variant="h4">
-        Vechile Details Panel
+        Vehicle Details Panel
       </Typography>
       <div>
         {vehicles.vehicle && (

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import InfinteScroll from "react-infinite-scroll-component";
 
 import { makeStyles, Button } from "@material-ui/core";
+
 import { getVehiclesDetails, selectVehicle } from "../actions/index";
 
 function Vehicle({ vehicle }) {
@@ -18,12 +19,14 @@ function Vehicle({ vehicle }) {
     dispatch(selectVehicle(payload));
   };
   return (
-    <div>
-      <Button onClick={() => handleSelectVehicle()}   style={{width:"100%"}}>
-        {vehicle.id}. 
-        {vehicle.name}
+    <span>
+      <Button
+        onClick={() => handleSelectVehicle()}
+        style={{ width: "100%", display: "flex", justifyContent: "flex-start" }}
+      >
+        {vehicle.id}.{vehicle.name}
       </Button>
-    </div>
+    </span>
   );
 }
 
