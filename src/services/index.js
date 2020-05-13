@@ -5,7 +5,7 @@ export function getVehicles(payload) {
 }
 
 export function postVehicle(payload) {
-  return Axios.post(`http://localhost:3000/vehicles`, { payload });
+  return Axios.post(`http://localhost:3000/vehicles`, payload);
 }
 
 export function filterVehiclesByName(payload) {
