@@ -44,6 +44,7 @@ export default function Sidebar() {
       make,
     };
     dispatch(createNewVehicle(payload));
+    handleClose();
   };
 
   console.log(name, year, make);
