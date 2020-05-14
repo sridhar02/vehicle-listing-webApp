@@ -1,6 +1,6 @@
 # Vehicle Listing Application 
 
-### The project is to build a simple vehicle listing web page using json-server for the backend api calls and react for building the frontend pages.
+### The project is to build a simple vehicle listing web page using json-server for the backend api calls and react for building the frontend page.
 
 ![The basic layout of the page](home.png)
 
